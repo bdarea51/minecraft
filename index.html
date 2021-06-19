@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mincraft | Download</title>
+<link rel="stylesheet" href="css/body.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<!-- <script>alert("this website is a alpha version so manny bug have")</script> -->
+
+</head>
+<body>
+    
+<nav>
+<p class="nav-logo">minecraft</p>
+
+<ul class="nav-btn">
+<li>home</li>
+<li><a href="#" target="_blank">facebook</a></li>
+<li><a href="#" target="_blank">messenger</a></li>
+<li><a href="#" target="_blank">instagram</a></li>
+<li><a href="#" target="_blank">twitter</a></li>
+<li onclick="navthemebtn()" id="navthemeli"><span class="material-icons" id="navthemebtn">wb_sunny</span></li>
+</ul>
+
+<button class="nav-ham-btn" onclick="navhambtn()">&#9776;</button>
+
+<ul class="nav-btn-other" id="navbtnother">
+<li>home</li>
+<li><a href="#" target="_blank">facebook</a></li>
+<li><a href="#" target="_blank">messenger</a></li>
+<li><a href="#" target="_blank">instagram</a></li>
+<li><a href="#" target="_blank">twitter</a></li>
+<li onclick="navthemebtnother()" id="navthemebtnotherid"><span id="navthemebtnid">dark theme</span></li>
+</ul>
+
+</nav>
+
+<section class="download-container">
+<div class="download-box-wrapper">
+<button>Poket Edition</button>
+<button>Java Edition</button>
+</div>
+</section>
+
+<footer>
+<p>copright @ 2021 bdarea51</p>
+</footer>
+
+<!-- feedback option here -->
+
+<button class="feedback-button" onclick="feedbakbtn()"><span class="material-icons">question_answer</span></button>
+
+<div class="feedback-wrapper" id="feedback-wrapper-id">
+<form class="feedback-container" action="php/feedback.php">
+<input type="text" name="name" id="name" placeholder="Name" required>
+<textarea name="description" id="msg-box" required></textarea>
+<input type="submit" value="post" id="msg-box-btn">
+</form>
+</div>
+
+<script src="js/nav.js"></script>
+<script src="js/other.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+nav {
+    background: var(--black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.nav-logo {
+    font-family: mcfont;
+    color: var(--white);
+    font-size: 25px;
+    position: relative;
+    z-index: 55;
+}
+
+.nav-btn {
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.nav-btn li {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: var(--appplefont);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 17px;
+    position: relative;
+    top: -2px;
+}
+
+#navthemeli {
+    margin-right: 0;
+    top: 4px;
+}
+
+#navthemeli::before {
+    content: "";
+    position: static;
+}
+
+.nav-btn li::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0.1px;
+    width: 100%;
+    height: 5px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s ease;
+}
+
+.nav-btn li:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-ham-btn {
+    display: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    font-size: 35px;
+    color: var(--white);
+    cursor: pointer;
+    position: relative;
+    top: -1px;
+    z-index: 55;
+}
+
+.nav-btn-other {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    max-width: 290px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    padding-top: 5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+    transition: .5s ease-in-out;
+}
+
+.nav-btn-other-shown {left: 0;}
+
+.nav-btn-other li {
+    border: 1px dotted var(--white);
+    font-family: var(--appplefont);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 865px){
+    nav {padding: 0px 40px;}
+    .nav-btn {display: none;}
+    .nav-ham-btn {display: inline-block;}
+}
+
+@media screen and (max-width: 365px) {
+    .nav-btn-other {
+        max-width: 100%;
+        left: -400px;
+    }
+    .nav-btn-other-shown {left: 0;}
+}
